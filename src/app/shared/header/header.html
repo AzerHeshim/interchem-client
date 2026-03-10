@@ -1,0 +1,27 @@
+<header class="site-header">
+  <a class="logo" href="/" aria-label="Interchem home">
+    <img src="/images/INTERCHEM-Logo-master.svg" alt="Interchem logo">
+  </a>
+
+  <button
+    class="mobile-menu-btn"
+    (click)="toggleMobileMenu()"
+    [attr.aria-expanded]="isMobileMenuOpen()"
+    aria-label="Toggle menu"
+  >
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <nav aria-label="Main navigation" [class.is-open]="isMobileMenuOpen()">
+    <ul class="menu">
+      <li><a class="menu-link is-active" href="/">Home</a></li>
+      <li><a class="menu-link" href="#about">About us</a></li>
+      <li><a class="menu-link" href="#products">Products</a></li>
+      <li><a class="menu-link" href="#services">Services</a></li>
+      <li><a class="menu-link" href="#media">Media</a></li>
+      <li><a class="menu-link" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
