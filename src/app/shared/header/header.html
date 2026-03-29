@@ -1,6 +1,6 @@
 <header class="site-header">
-  <a class="logo" href="/" aria-label="Interchem home">
-    <img src="/images/INTERCHEM-Logo-master.svg" alt="Interchem logo">
+  <a class="logo" routerLink="/" aria-label="Interchem home">
+    <img src="images/INTERCHEM-Logo-master.svg" alt="Interchem logo">
   </a>
 
   <button
@@ -16,12 +16,26 @@
 
   <nav aria-label="Main navigation" [class.is-open]="isMobileMenuOpen()">
     <ul class="menu">
-      <li><a class="menu-link is-active" href="/">Home</a></li>
-      <li><a class="menu-link" href="#about">About us</a></li>
-      <li><a class="menu-link" href="#products">Products</a></li>
-      <li><a class="menu-link" href="#services">Services</a></li>
-      <li><a class="menu-link" href="#media">Media</a></li>
-      <li><a class="menu-link" href="#contact">Contact</a></li>
+      <li><a class="menu-link is-active" routerLink="/">{{ 'nav.home' | t }}</a></li>
+      <li><a class="menu-link" href="#about">{{ 'nav.about' | t }}</a></li>
+      <li><a class="menu-link" href="#products">{{ 'nav.products' | t }}</a></li>
+      <li><a class="menu-link" href="#services">{{ 'nav.services' | t }}</a></li>
+      <li><a class="menu-link" routerLink="/news">{{ 'nav.media' | t }}</a></li>
+      <li><a class="menu-link" href="#contact">{{ 'nav.contact' | t }}</a></li>
     </ul>
   </nav>
+
+  <div class="lang-switcher">
+    <button
+      class="lang-btn"
+      [class.is-active]="currentLang() === 'en'"
+      (click)="setLang('en')"
+    >EN</button>
+    <span class="lang-divider">|</span>
+    <button
+      class="lang-btn"
+      [class.is-active]="currentLang() === 'az'"
+      (click)="setLang('az')"
+    >AZ</button>
+  </div>
 </header>

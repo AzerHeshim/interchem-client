@@ -3,14 +3,12 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content fade-in-section">
-    <h1>Advanced Agricultural Solutions for Modern Farming</h1>
-    <p>
-      Delivering fertilizers, crop protection products and agronomic expertise for productive and sustainable agriculture.
-    </p>
+    <h1>{{ 'hero.title' | t }}</h1>
+    <p>{{ 'hero.desc' | t }}</p>
 
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#products">Explore Products</a>
-      <a class="btn btn-secondary" href="#suppliers">Become a Partner</a>
+      <a class="btn btn-primary" href="#products">{{ 'hero.explore' | t }}</a>
+      <a class="btn btn-secondary" href="#contact">{{ 'hero.partner' | t }}</a>
     </div>
   </div>
 </section>
@@ -18,28 +16,25 @@
 <!-- ── Intro / Stats ── -->
 <section class="intro-section fade-in-section" id="intro">
   <div class="section-shell">
-    <p class="intro-lead">
-      Interchem is a supplier of agricultural inputs and technologies focused on fertilizers, crop protection products and agronomic solutions.
-      The company works with farmers and agribusinesses to support modern and efficient agricultural production.
-    </p>
-    <div class="intro-stats">
+    <p class="intro-lead">{{ 'intro.text' | t }}</p>
+    <!-- <div class="intro-stats">
       <div class="stat-item">
-        <span class="stat-number">9</span>
-        <span class="stat-label">Product categories</span>
+        <span class="stat-number">{{ 'intro.stat1' | t }}</span>
+        <span class="stat-label">{{ 'intro.stat1_label' | t }}</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">7</span>
-        <span class="stat-label">Service areas</span>
+        <span class="stat-number">{{ 'intro.stat2' | t }}</span>
+        <span class="stat-label">{{ 'intro.stat2_label' | t }}</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">20+</span>
-        <span class="stat-label">International partners</span>
+        <span class="stat-number">{{ 'intro.stat3' | t }}</span>
+        <span class="stat-label">{{ 'intro.stat3_label' | t }}</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">5+</span>
-        <span class="stat-label">Cooperation areas</span>
+        <span class="stat-number">{{ 'intro.stat4' | t }}</span>
+        <span class="stat-label">{{ 'intro.stat4_label' | t }}</span>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -47,25 +42,23 @@
 <section class="about-section fade-in-section" id="about">
   <div class="about-shell">
     <div class="about-media">
-      <img src="/images/about-img.jpg" alt="Interchem agricultural team and farming solutions" />
+      <img src="images/about-img.png" alt="Interchem agricultural team and farming solutions" />
     </div>
 
     <div class="about-content">
-      <p class="eyebrow">Who is Interchem?</p>
-      <h2>Supporting modern agriculture with reliable inputs and expertise</h2>
-      <p class="about-intro">
-        Interchem is a supplier of agricultural inputs, agrochemical products and farming technologies. Our goal is to help farmers increase productivity and support the development of modern agriculture.
-      </p>
+      <p class="eyebrow">{{ 'about.eyebrow' | t }}</p>
+      <!-- <h2>{{ 'about.title' | t }}</h2> -->
+      <p class="about-intro">{{ 'about.intro' | t }}</p>
 
       <div class="about-points">
         <article class="about-card">
-          <h3>Our mission</h3>
-          <p>To provide farmers and agribusinesses with high-quality agricultural products and effective agronomic solutions.</p>
+          <h3>{{ 'about.mission_title' | t }}</h3>
+          <p>{{ 'about.mission_text' | t }}</p>
         </article>
 
         <article class="about-card">
-          <h3>Our vision</h3>
-          <p>To become a reliable and innovative supplier in the agricultural sector of Azerbaijan.</p>
+          <h3>{{ 'about.vision_title' | t }}</h3>
+          <p>{{ 'about.vision_text' | t }}</p>
         </article>
       </div>
     </div>
@@ -76,48 +69,90 @@
 <section class="products-showcase fade-in-section" id="products">
   <div class="section-shell">
     <div class="showcase-head">
-      <p class="eyebrow">Products</p>
-      <h2>Complete agricultural portfolio built for performance</h2>
+      <p class="eyebrow">{{ 'products.eyebrow' | t }}</p>
+      <h2>{{ 'products.title' | t }}</h2>
     </div>
 
-    <div class="bento-grid">
-      <article class="bento-card card-forest card-tall">
-        <span class="card-icon" aria-hidden="true">🌾</span>
-        <h3>Mineral and organic fertilizers</h3>
-      </article>
-      <article class="bento-card card-leaf">
-        <span class="card-icon" aria-hidden="true">🧬</span>
-        <h3>Plant growth regulators</h3>
-      </article>
-      <article class="bento-card card-clean card-wide">
-        <span class="card-icon" aria-hidden="true">🪨</span>
-        <h3>Soil conditioners</h3>
-      </article>
-      <article class="bento-card card-dark card-wide">
-        <span class="card-icon" aria-hidden="true">🌱</span>
-        <h3>Soil and growing substrates</h3>
-      </article>
-      <article class="bento-card card-mint">
-        <span class="card-icon" aria-hidden="true">🛡️</span>
-        <h3>Crop protection products</h3>
+    <div class="products-grid">
+      <article class="product-card product-card--featured">
+        <div class="product-card__img product-card__img--fertilizers"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.fertilizers' | t }}</h3>
+          <p>{{ 'products.fertilizers_desc' | t }}</p>
+        </div>
       </article>
 
-      <article class="bento-card card-clean card-wide">
-        <span class="card-icon" aria-hidden="true">🧪</span>
-        <h3>Disinfection and fumigation products</h3>
-      </article>
-      <article class="bento-card card-dark card-wide">
-        <span class="card-icon" aria-hidden="true">📦</span>
-        <h3>Postharvest preservation solutions</h3>
-      </article>
-      <article class="bento-card card-warm">
-        <span class="card-icon" aria-hidden="true">💧</span>
-        <h3>Irrigation systems and accessories</h3>
+      <article class="product-card">
+        <div class="product-card__img product-card__img--regulators"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.regulators' | t }}</h3>
+          <p>{{ 'products.regulators_desc' | t }}</p>
+        </div>
       </article>
 
-      <article class="bento-card card-mint card-wide">
-        <span class="card-icon" aria-hidden="true">🏗️</span>
-        <h3>Greenhouse systems and accessories</h3>
+      <article class="product-card">
+        <div class="product-card__img product-card__img--conditioners"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.conditioners' | t }}</h3>
+          <p>{{ 'products.conditioners_desc' | t }}</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__img product-card__img--substrates"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.substrates' | t }}</h3>
+          <p>{{ 'products.substrates_desc' | t }}</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__img product-card__img--disinfection"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.disinfection' | t }}</h3>
+          <p>{{ 'products.disinfection_desc' | t }}</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__img product-card__img--irrigation"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.irrigation' | t }}</h3>
+          <p>{{ 'products.irrigation_desc' | t }}</p>
+        </div>
+      </article>
+
+      <article class="product-card product-card--featured">
+        <div class="product-card__img product-card__img--protection"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.protection' | t }}</h3>
+          <p>{{ 'products.protection_desc' | t }}</p>
+        </div>
+      </article>
+
+      <article class="product-card product-card--featured">
+        <div class="product-card__img product-card__img--postharvest"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.postharvest' | t }}</h3>
+          <p>{{ 'products.postharvest_desc' | t }}</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__img product-card__img--greenhouse"></div>
+        <div class="product-card__overlay"></div>
+        <div class="product-card__body">
+          <h3>{{ 'products.greenhouse' | t }}</h3>
+          <p>{{ 'products.greenhouse_desc' | t }}</p>
+        </div>
       </article>
     </div>
   </div>
@@ -127,9 +162,9 @@
 <section class="suppliers-section fade-in-section" id="suppliers">
   <div class="section-shell">
     <div class="suppliers-head">
-      <p class="eyebrow">Partnership</p>
-      <h2>For Suppliers</h2>
-      <p class="suppliers-lead">Interchem welcomes cooperation with international manufacturers and agricultural technology companies.</p>
+      <p class="eyebrow">{{ 'suppliers.eyebrow' | t }}</p>
+      <h2>{{ 'suppliers.title' | t }}</h2>
+      <p class="suppliers-lead">{{ 'suppliers.lead' | t }}</p>
     </div>
 
     <div class="supplier-tabs">
@@ -137,24 +172,24 @@
       <input type="radio" name="supplier-tab" id="supplier-tab-areas">
 
       <div class="supplier-tab-controls">
-        <label for="supplier-tab-offers">We offer partners</label>
-        <label for="supplier-tab-areas">Areas of cooperation</label>
+        <label for="supplier-tab-offers">{{ 'suppliers.tab_offers' | t }}</label>
+        <label for="supplier-tab-areas">{{ 'suppliers.tab_areas' | t }}</label>
       </div>
 
       <div class="supplier-panels">
         <div class="supplier-panel panel-offers">
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Access to the Azerbaijan agricultural market</p></article>
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Distribution and sales network</p></article>
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Agronomic and technical support</p></article>
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Marketing and market development</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.offer1' | t }}</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.offer2' | t }}</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.offer3' | t }}</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.offer4' | t }}</p></article>
         </div>
 
         <div class="supplier-panel panel-areas">
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Fertilizers</p></article>
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Crop protection products</p></article>
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Biostimulants</p></article>
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Irrigation technologies</p></article>
-          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>Greenhouse technologies</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.area1' | t }}</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.area2' | t }}</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.area3' | t }}</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.area4' | t }}</p></article>
+          <article class="supplier-item"><span class="supplier-icon" aria-hidden="true"></span><p>{{ 'suppliers.area5' | t }}</p></article>
         </div>
       </div>
     </div>
@@ -164,31 +199,37 @@
 <!-- ── Services ── -->
 <section class="services-showcase fade-in-section" id="services">
   <div class="section-shell">
-    <div class="services-layout">
+     <div class="">
+      <p class="eyebrow">{{ 'services.eyebrow' | t }}</p>
+      <!-- <h2>{{ 'services.title' | t }}</h2> -->
+       <p class="services-lead">{{ 'services.title' | t }}</p>
+      <p class="suppliers-lead">{{ 'services.lead' | t }}</p>
+    </div>
+    <!-- <div class="services-layout">
       <article class="services-hero">
-        <p class="eyebrow">Our Services</p>
-        <h2>Interchem services for every stage of farm operations</h2>
-        <p class="services-lead">Interchem provides the following services to farmers and agribusinesses.</p>
-        <p class="services-chip">Built for farmers and agribusinesses</p>
+        <p class="eyebrow">{{ 'services.eyebrow' | t }}</p>
+        <h2>{{ 'services.title' | t }}</h2>
+        <p class="services-lead">{{ 'services.lead' | t }}</p>
+        <p class="services-chip">{{ 'services.chip' | t }}</p>
       </article>
 
       <article class="services-visual">
         <div class="services-visual-overlay"></div>
-        <h3>End-to-end field support</h3>
-        <p>From diagnostics and planning to installation and long-term system care.</p>
+        <h3>{{ 'services.visual_title' | t }}</h3>
+        <p>{{ 'services.visual_desc' | t }}</p>
       </article>
-    </div>
+    </div> -->
 
     <article class="services-list-shell">
-      <h3>Service List</h3>
+      <h3>{{ 'services.list_title' | t }}</h3>
       <ul class="services-list">
-        <li><span>01</span><p>Agronomic consulting</p></li>
-        <li><span>02</span><p>Soil, water and plant analysis</p></li>
-        <li><span>03</span><p>Fertilization and crop protection services</p></li>
-        <li><span>04</span><p>Disinfection and fumigation services</p></li>
-        <li><span>05</span><p>Installation and maintenance of irrigation systems</p></li>
-        <li><span>06</span><p>Installation and maintenance of greenhouse systems</p></li>
-        <li><span>07</span><p>Agricultural consulting and farm management support</p></li>
+        <li><span>01</span><p>{{ 'services.s1' | t }}</p></li>
+        <li><span>02</span><p>{{ 'services.s2' | t }}</p></li>
+        <li><span>03</span><p>{{ 'services.s3' | t }}</p></li>
+        <li><span>04</span><p>{{ 'services.s4' | t }}</p></li>
+        <li><span>05</span><p>{{ 'services.s5' | t }}</p></li>
+        <li><span>06</span><p>{{ 'services.s6' | t }}</p></li>
+        <li><span>07</span><p>{{ 'services.s7' | t }}</p></li>
       </ul>
     </article>
   </div>
@@ -197,28 +238,49 @@
 <!-- ── Partners Marquee ── -->
 <section class="partners-section fade-in-section" id="partners">
   <div class="section-shell">
-    <p class="eyebrow">Our Partners</p>
-    <h2>Working with leading international brands</h2>
+    <p class="eyebrow">{{ 'partners.eyebrow' | t }}</p>
+    <h2>{{ 'partners.title' | t }}</h2>
   </div>
   <div class="partners-marquee">
     <div class="marquee-track">
-      <div class="marquee-item">Partner 1</div>
-      <div class="marquee-item">Partner 2</div>
-      <div class="marquee-item">Partner 3</div>
-      <div class="marquee-item">Partner 4</div>
-      <div class="marquee-item">Partner 5</div>
-      <div class="marquee-item">Partner 6</div>
-      <div class="marquee-item">Partner 7</div>
-      <div class="marquee-item">Partner 8</div>
+      @for (partner of partners; track partner.name) {
+        <div class="marquee-item">
+          <img [src]="partner.logo" [alt]="partner.name" loading="lazy" />
+        </div>
+      }
       <!-- duplicate for seamless loop -->
-      <div class="marquee-item">Partner 1</div>
-      <div class="marquee-item">Partner 2</div>
-      <div class="marquee-item">Partner 3</div>
-      <div class="marquee-item">Partner 4</div>
-      <div class="marquee-item">Partner 5</div>
-      <div class="marquee-item">Partner 6</div>
-      <div class="marquee-item">Partner 7</div>
-      <div class="marquee-item">Partner 8</div>
+      @for (partner of partners; track partner.name) {
+        <div class="marquee-item">
+          <img [src]="partner.logo" [alt]="partner.name" loading="lazy" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ── Media / News ── -->
+<section class="media-section fade-in-section" id="media">
+  <div class="section-shell">
+    <div class="media-head">
+      <div>
+        <p class="eyebrow">{{ 'media.eyebrow' | t }}</p>
+        <h2>{{ 'media.title' | t }}</h2>
+      </div>
+      <a routerLink="/news" class="btn btn-outline-dark">{{ 'media.show_all' | t }} &rarr;</a>
+    </div>
+
+    <div class="media-grid">
+      @for (item of latestNews; track item.slug) {
+        <a class="media-card" [routerLink]="['/news', item.slug]">
+          <div class="media-card__img">
+            <img [src]="item.image" [alt]="item.title" loading="lazy" />
+          </div>
+          <div class="media-card__body">
+            <time class="media-card__date">{{ item.date }}</time>
+            <h3 class="media-card__title">{{ item.title }}</h3>
+          </div>
+        </a>
+      }
     </div>
   </div>
 </section>
@@ -227,40 +289,46 @@
 <section class="contact-section fade-in-section" id="contact">
   <div class="contact-shell">
     <article class="contact-info">
-      <p class="eyebrow">Get in touch</p>
-      <h2>Contact us</h2>
+      <p class="eyebrow">{{ 'contact.eyebrow' | t }}</p>
+      <h2>{{ 'contact.title' | t }}</h2>
 
       <ul class="contact-list">
         <li>
-          <span class="contact-label">Phone</span>
+          <span class="contact-label">{{ 'contact.phone' | t }}</span>
           <a href="tel:+994106401010">+994 10 640 10 10</a>
         </li>
         <li>
-          <span class="contact-label">Email</span>
+          <span class="contact-label">{{ 'contact.email' | t }}</span>
           <a href="mailto:info@interchem.az">info@interchem.az</a>
         </li>
         <li>
-          <span class="contact-label">Office address</span>
-          <p>Baku city, Ziya Bunyadov ave. 1965, Chinar Park Business Center, House 6, Floor 4</p>
+          <span class="contact-label">{{ 'contact.address_label' | t }}</span>
+          <p>{{ 'contact.address' | t }}</p>
         </li>
       </ul>
 
       <div class="contact-socials">
-        <span class="contact-label">Follow us</span>
+        <span class="contact-label">{{ 'contact.follow' | t }}</span>
         <div class="social-links">
-          <a href="#">LinkedIn</a>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
+          <a href="https://www.linkedin.com/company/interchem-azerbaijan/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/interchem.azerbaijan/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/interchem.azerbaijan" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@interchem_azerbaijan" target="_blank" rel="noopener">TikTok</a>
         </div>
       </div>
     </article>
 
     <article class="contact-map">
-      <div class="map-placeholder" role="img" aria-label="Google Maps placeholder for Interchem office location">
-        <span class="map-pin"></span>
-        <h3>Map Placeholder</h3>
-        <p>Google Maps embed will be added here.</p>
-      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.8!2d49.858554!3d40.414206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI0JzUxLjEiTiA0OcKwNTEnMzAuOCJF!5e0!3m2!1sen!2saz!4v1"
+        width="100%"
+        height="100%"
+        style="border:0; border-radius: 0.85rem;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Interchem office location"
+      ></iframe>
     </article>
   </div>
 </section>

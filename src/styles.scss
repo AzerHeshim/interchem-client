@@ -104,13 +104,15 @@ ol {
 }
 
 /* ── Scroll Animations (SSR-safe) ── */
-.animations-ready .fade-in-section {
+/* Elements start fully visible. Only off-screen elements get .will-animate
+   which hides them. When they scroll into view, .is-visible fades them in. */
+.fade-in-section.will-animate {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
 }
 
-.animations-ready .fade-in-section.is-visible {
+.fade-in-section.is-visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
 }

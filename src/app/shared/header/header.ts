@@ -1,14 +1,23 @@
-import { Component, HostBinding, HostListener, signal } from '@angular/core';
+import { Component, HostBinding, HostListener, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../pipes/translate.pipe';
+import { TranslationService } from '../services/translation.service';
+import { Lang } from '../i18n/translations';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
+  i18n = inject(TranslationService);
   isScrolled = signal(false);
   isMobileMenuOpen = signal(false);
+
+  get currentLang() {
+    return this.i18n.currentLang;
+  }
 
   @HostBinding('class.scrolled')
   get scrolledClass() {
@@ -22,5 +31,9 @@ export class Header {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen.update((v) => !v);
+  }
+
+  setLang(lang: Lang) {
+    this.i18n.setLang(lang);
   }
 }

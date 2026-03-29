@@ -86,6 +86,41 @@
   color: var(--color-primary-light);
 }
 
+.footer-lang {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-neutral-500);
+  padding: 0.25rem 0.4rem;
+  border-radius: 4px;
+  transition: color 0.25s var(--ease-out), background 0.25s var(--ease-out);
+}
+
+.footer-lang-btn.is-active {
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.footer-lang-btn:hover:not(.is-active) {
+  color: var(--color-neutral-200);
+}
+
+.footer-lang-divider {
+  color: var(--color-neutral-600);
+  font-size: 0.8rem;
+  user-select: none;
+}
+
 .footer-bottom {
   max-width: var(--container-max);
   margin: 0 auto;

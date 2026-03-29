@@ -3,7 +3,23 @@
     "allow": [
       "mcp__Claude_Preview__preview_start",
       "Bash(npx ng serve --port 4200)",
-      "Bash(taskkill //F //IM node.exe)"
+      "Bash(taskkill //F //IM node.exe)",
+      "WebSearch",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "WebFetch(domain:seeklogo.com)",
+      "WebFetch(domain:logos.fandom.com)",
+      "WebFetch(domain:brandfetch.com)",
+      "WebFetch(domain:www.tessenderlo.com)",
+      "Bash(curl -L -o \"D:/projects/interchem-client/src/assets/partners/ocp.png\" \"https://images.seeklogo.com/logo-png/22/1/ocp-logo-png_seeklogo-222172.png\" -H \"User-Agent: Mozilla/5.0\" -H \"Referer: https://seeklogo.com/\")",
+      "Bash(curl -L -o \"D:/projects/interchem-client/src/assets/partners/bioiberica.png\" \"https://images.seeklogo.com/logo-png/60/1/bioiberica-logo-png_seeklogo-607432.png\" -H \"User-Agent: Mozilla/5.0\" -H \"Referer: https://seeklogo.com/\")",
+      "Bash(curl -L -o \"D:/projects/interchem-client/src/assets/partners/basf.png\" \"https://images.seeklogo.com/logo-png/50/1/basf-logo-png_seeklogo-507517.png\" -H \"User-Agent: Mozilla/5.0\" -H \"Referer: https://seeklogo.com/\")",
+      "Bash(curl -L -o \"D:/projects/interchem-client/src/assets/partners/sunset.png\" \"https://images.seeklogo.com/logo-png/38/1/sunset-logo-png_seeklogo-380897.png\" -H \"User-Agent: Mozilla/5.0\" -H \"Referer: https://seeklogo.com/\")",
+      "Bash(curl -L -o \"D:/projects/interchem-client/src/assets/partners/tessenderlo.png\" \"https://cdn.brandfetch.io/idC3xAy3FS/w/1500/h/500/idY1EyKQiX.jpeg?c=1bxid64Mup7aczewSAYMX&t=1767169739229\" -H \"User-Agent: Mozilla/5.0\")",
+      "WebFetch(domain:www.sunsetgrown.com)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(curl -L -o \"D:/projects/interchem-client/src/assets/partners/sunset.png\" \"https://www.sunsetgrown.com/wp-content/uploads/2020/10/SUNSET_Logo5.png\" -H \"User-Agent: Mozilla/5.0\")",
+      "Bash(curl -L -o \"D:/projects/interchem-client/src/assets/partners/tessenderlo_test.png\" \"https://www.tessenderlo.com/sites/tessenderlo/files/styles/full_lg/public/images/2025-06/2025-tg-brands-footer-new-june-25.jpg\" -H \"User-Agent: Mozilla/5.0\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4200)"
     ]
   }
 }

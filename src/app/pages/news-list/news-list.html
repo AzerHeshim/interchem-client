@@ -1,0 +1,30 @@
+<section class="news-page">
+  <div class="news-page__shell">
+    <div class="news-page__head">
+      <p class="eyebrow">{{ 'news.page_eyebrow' | t }}</p>
+      <h1>{{ 'news.page_title' | t }}</h1>
+      <p class="news-page__lead">{{ 'news.page_lead' | t }}</p>
+    </div>
+
+    <div class="news-page__grid">
+      @for (item of news; track item.slug) {
+        <a class="news-card" [routerLink]="['/news', item.slug]">
+          <div class="news-card__img">
+            <img [src]="item.image" [alt]="item.title" loading="lazy" />
+          </div>
+          <div class="news-card__body">
+            <time class="news-card__date">{{ item.date }}</time>
+            <h2 class="news-card__title">{{ item.title }}</h2>
+            <p class="news-card__excerpt">{{ item.description.substring(0, 160) }}...</p>
+          </div>
+        </a>
+      }
+    </div>
+
+    @if (news.length === 0) {
+      <div class="news-page__empty">
+        <p>{{ 'news.empty' | t }}</p>
+      </div>
+    }
+  </div>
+</section>
